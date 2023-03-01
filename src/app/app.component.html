@@ -1,0 +1,9 @@
+<app-festivals-list
+  [festivals]="festivals"
+  (festivalSelected)="changeFestival($event)"
+></app-festivals-list>
+<app-message></app-message>
+<app-festival-details
+  *ngIf="festivalSelected"
+  [festival]="festivalSelected"
+></app-festival-details>

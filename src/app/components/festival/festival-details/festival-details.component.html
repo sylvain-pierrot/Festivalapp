@@ -1,0 +1,8 @@
+<p>festival-details works!</p>
+<form [formGroup]="festivalGroup" (ngSubmit)="validate()">
+  <label>Name: <input type="text" formControlName="name" /></label>
+  <label>Entrance: <input type="text" formControlName="entrancePrice" /></label>
+  <label>Room: <input type="text" formControlName="mainRoomPrice" /></label>
+
+  <button type="submit" [disabled]="!festivalGroup.valid">Submit</button>
+</form>
